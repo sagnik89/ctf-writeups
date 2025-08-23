@@ -20,7 +20,7 @@ Analysis :
     - Script
         
         ```python
-        #! /bin/python3
+        #!/usr/bin/env python3
         
         import requests, sys
         
