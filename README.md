@@ -14,6 +14,7 @@ A collection of all my Capture The Flag (CTF) and security lab writeups in one p
 ## 🔐 PortSwigger Labs
 - [SQli Labs](./PortSwigger_Labs/SQL%20Injection.md)
 - [Authentication labs](./PortSwigger_Labs/Authentication.md)
+- [OS Command Injection labs](./PortSwigger_Labs/os_cmd_injection.md)
 
 ---
 
