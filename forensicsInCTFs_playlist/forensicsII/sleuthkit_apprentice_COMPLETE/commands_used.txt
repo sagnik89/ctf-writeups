@@ -1,0 +1,5 @@
+ 2280  mmls disk.flag.img
+ 2281  fls -r -o 360448 disk.flag.img
+ 2282  fls -r -o 360448 disk.flag.img | grep flag
+ 2283  icat -o 360448 disk.flag.img 2371 > flag.txt
+ 2285  cat flag.txt | xclip

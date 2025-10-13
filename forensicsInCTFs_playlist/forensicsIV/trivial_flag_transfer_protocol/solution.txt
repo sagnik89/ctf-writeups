@@ -1,0 +1,8 @@
+extract the files from the file given to you. 
+Decipher the two text files 
+Understand that the password is given in the file
+install the program in the file and see that it installs steghide 
+use steghide to extract the file using the password found
+try all the 3 images
+get the flag 
+enjoy

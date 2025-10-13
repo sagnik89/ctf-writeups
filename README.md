@@ -18,6 +18,10 @@ A collection of all my Capture The Flag (CTF) and security lab writeups in one p
 - [OS Command Injection labs](./PortSwigger_Labs/os_cmd_injection.md)
 - [API Testing labs](./PortSwigger_Labs/API%20Testing.md)
 
+---
+
+## Others
+- [Forensics in CTFs Playlist [picoCTF] ](./forensicsInCTFs_playlist/README.md)
 
 ---
 

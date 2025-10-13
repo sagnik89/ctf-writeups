@@ -1,0 +1,7 @@
+ 2240  mmls dds2-alpine.flag.img ---> To find the offset
+ 2241  fls -r dds2-alpine.flag.img -o 2048 --> extracting all the files
+ 2244  fls -r -o 2048 dds2-alpine.flag.img | grep "down-at-the-bottom.txt"\n ---> To find the offset
+ 2245  icat -o 2048 dds2-alpine.flag.img 18291 > file.txt --> extracting the file
+
+
+

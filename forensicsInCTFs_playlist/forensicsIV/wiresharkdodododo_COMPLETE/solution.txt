@@ -1,0 +1,7 @@
+Open the file in wireshark
+you wont get anything if you follow the streams
+export the objects i.e the files from the network capture
+save the files locally 
+you will get a encoded message in one of the file
+put the file in dcode.fr and it will show that it has rot13 encoding 
+rot13 decode it and get the flag
