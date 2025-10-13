@@ -4,6 +4,7 @@ Link -> [Playlist Link](https://play.picoctf.org/playlists/16?m=114)
 
 Each folder contains the resources for the corresponding challenge and solution. This is a picoGYM playlist.
 
+Note: Download the disk files yourself from the website, if you want to follow along
 ---
 
 ## Forensics I
@@ -32,3 +33,5 @@ Each folder contains the resources for the corresponding challenge and solution.
 - [Packets Primer](forensicsInCTFs_playlist/forensicsIV/packets_primer_COMPLETE)
 - [Trivial Flag Transfer Protocol](forensicsInCTFs_playlist/forensicsIV/trivial_flag_transfer_protocol)
 - [Wireshark Dodododo](forensicsInCTFs_playlist/forensicsIV/wiresharkdodododo_COMPLETE)
+
+
