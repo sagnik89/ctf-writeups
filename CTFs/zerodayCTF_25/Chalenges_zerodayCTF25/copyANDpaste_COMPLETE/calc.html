@@ -1,0 +1,413 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>NeatCalc — Single File Calculator</title>
+<style>
+  :root{
+    --bg: #0f1724;
+    --panel: rgba(255,255,255,0.04);
+    --glass: rgba(255,255,255,0.03);
+    --accent: #6ee7b7;
+    --accent-2: #60a5fa;
+    --muted: #94a3b8;
+    --btn-bg: rgba(255,255,255,0.03);
+    --danger: #fb7185;
+    --radius: 14px;
+    --glass-border: rgba(255,255,255,0.06);
+    font-family: Inter, ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+  }
+
+  *{box-sizing:border-box}
+
+  html,body{
+    height:100%;
+    margin:0;
+    background: radial-gradient(1200px 600px at 10% 10%, rgba(96,165,250,0.06), transparent 6%),
+                radial-gradient(1000px 500px at 90% 90%, rgba(110,231,183,0.04), transparent 6%),
+                var(--bg);
+    color: #e6eef8;
+    -webkit-font-smoothing:antialiased;
+    -moz-osx-font-smoothing:grayscale;
+  }
+
+  .wrap{
+    min-height:100%;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    padding:28px;
+  }
+
+  .calc {
+    width: min(420px, 96vw);
+    background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
+    border-radius: var(--radius);
+    padding:18px;
+    box-shadow: 0 10px 30px rgba(2,6,23,0.6), inset 0 1px 0 rgba(255,255,255,0.02);
+    border: 1px solid var(--glass-border);
+    backdrop-filter: blur(6px) saturate(125%);
+  }
+
+  .top-row{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    gap:12px;
+    margin-bottom:12px;
+  }
+
+  .brand{
+    display:flex;
+    gap:12px;
+    align-items:center;
+  }
+
+  .logo {
+    width:46px;
+    height:46px;
+    border-radius:10px;
+    background:linear-gradient(135deg,var(--accent),var(--accent-2));
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-weight:700;
+    color:#06202a;
+    box-shadow:0 6px 18px rgba(99,102,241,0.12);
+  }
+
+  .brand h1{
+    font-size:16px;
+    margin:0;
+    letter-spacing:0.2px;
+  }
+  .brand p{ margin:0; font-size:12px; color:var(--muted) }
+
+  .controls{
+    display:flex;
+    gap:8px;
+    align-items:center;
+  }
+
+  .theme-toggle{
+    display:inline-grid;
+    grid-auto-flow:column;
+    gap:8px;
+    align-items:center;
+  }
+
+  .display {
+    margin-bottom:14px;
+    background: linear-gradient(180deg, rgba(255,255,255,0.015), rgba(255,255,255,0.01));
+    padding:14px;
+    border-radius:10px;
+    border:1px solid rgba(255,255,255,0.02);
+  }
+
+  .history{
+    font-size:13px;
+    color:var(--muted);
+    min-height:16px;
+    max-height:20px;
+    overflow:hidden;
+  }
+
+  .screen{
+    font-family: "Segoe UI Variable", ui-sans-serif, system-ui;
+    font-weight:600;
+    font-size:28px;
+    text-align:right;
+    margin-top:6px;
+    word-break:break-all;
+  }
+
+  .keys{
+    display:grid;
+    grid-template-columns: repeat(4,1fr);
+    gap:10px;
+    margin-top:12px;
+  }
+
+  button.key{
+    padding:16px;
+    border-radius:12px;
+    background:var(--btn-bg);
+    border:1px solid rgba(255,255,255,0.02);
+    color:inherit;
+    font-size:18px;
+    font-weight:600;
+    transition:transform .12s ease, box-shadow .12s ease, background .12s;
+    cursor:pointer;
+    box-shadow: 0 3px 8px rgba(2,6,23,0.45);
+    user-select:none;
+  }
+
+  button.key:active{ transform: translateY(2px) scale(.997) }
+
+  button.op { background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01)); }
+  button.equal {
+    grid-column: span 2;
+    background: linear-gradient(180deg, rgba(96,165,250,0.14), rgba(110,231,183,0.08));
+    color:#021025;
+    box-shadow: 0 8px 24px rgba(96,165,250,0.14);
+  }
+
+  button.clear { background: linear-gradient(180deg, rgba(251,113,133,0.12), rgba(251,113,133,0.06)); color:#021025; }
+
+  button.wide { grid-column: span 2; }
+
+  .kbd-hint { font-size:11px; color:var(--muted); margin-top:10px; text-align:right; }
+
+  /* small screens */
+  @media (max-width:420px){
+    .screen{ font-size:22px }
+    button.key{ padding:14px; font-size:16px; }
+  }
+
+  /* Light theme (optional) */
+  .light {
+    --bg: linear-gradient(180deg,#f8fafc,#eef2ff);
+    color:#0b1220;
+    --panel: rgba(4,6,7,0.02);
+    --glass-border: rgba(2,6,23,0.03);
+    --btn-bg: rgba(11,18,32,0.02);
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <main class="calc" id="app" role="application" aria-label="Calculator">
+    <div class="top-row">
+      <div class="brand" aria-hidden="false">
+        <div class="logo" aria-hidden="true">NC</div>
+        <div>
+          <h1>NeatCalc</h1>
+          <p>fast • clean • keyboard first</p>
+        </div>
+      </div>
+      <div class="controls">
+        <div class="theme-toggle" title="Toggle theme">
+          <button id="toggleTheme" aria-label="Toggle theme" class="key op" style="padding:8px 10px;font-size:14px">🌗</button>
+        </div>
+        <div>
+          <button id="copyBtn" class="key" aria-label="Copy result" title="Copy result">Copy</button>
+        </div>
+      </div>
+    </div>
+
+    <section class="display" aria-live="polite">
+      <div class="history" id="history" aria-hidden="false"></div>
+      <div id="screen" class="screen" role="status" aria-atomic="true">0</div>
+    </section>
+
+    <div class="keys" role="grid" aria-label="Calculator keys">
+      <!-- Row 1 -->
+      <button class="key clear" data-key="C" aria-label="Clear">C</button>
+      <button class="key op" data-key="(" aria-label="Open parenthesis">(</button>
+      <button class="key op" data-key=")" aria-label="Close parenthesis">)</button>
+      <button class="key op" data-key="back" aria-label="Backspace">⌫</button>
+
+      <!-- Row 2 -->
+      <button class="key" data-key="7">7</button>
+      <button class="key" data-key="8">8</button>
+      <button class="key" data-key="9">9</button>
+      <button class="key op" data-key="/" aria-label="Divide">÷</button>
+
+      <!-- Row 3 -->
+      <button class="key" data-key="4">4</button>
+      <button class="key" data-key="5">5</button>
+      <button class="key" data-key="6">6</button>
+      <button class="key op" data-key="*" aria-label="Multiply">×</button>
+
+      <!-- Row 4 -->
+      <button class="key" data-key="1">1</button>
+      <button class="key" data-key="2">2</button>
+      <button class="key" data-key="3">3</button>
+      <button class="key op" data-key="-" aria-label="Subtract">−</button>
+
+      <!-- Row 5 -->
+      <button class="key" data-key="0">0</button>
+      <button class="key" data-key="." aria-label="Decimal point">.</button>
+      <button class="key op" data-key="%" aria-label="Percent">%</button>
+      <button class="key op" data-key="+" aria-label="Add">+</button>
+
+      <!-- Row 6 -->
+      <button class="key wide" id="ansBtn" data-key="ans" title="Use last answer">ANS</button>
+      <button class="key equal" id="equals" data-key="=" aria-label="Equals">=</button>
+    </div>
+
+    <div class="kbd-hint">Keys: numbers, + - * / % . ( ) Enter =, Backspace</div>
+  </main>
+</div>
+
+<script>
+(() => {
+  const screen = document.getElementById('screen');
+  const historyEl = document.getElementById('history');
+  const keys = Array.from(document.querySelectorAll('button.key'));
+  const equalsBtn = document.getElementById('equals');
+  const copyBtn = document.getElementById('copyBtn');
+  const toggleTheme = document.getElementById('toggleTheme');
+  const ansBtn = document.getElementById('ansBtn');
+
+  let expr = '';
+  let lastAnswer = '';
+
+  const setScreen = (s) => {
+    screen.textContent = s === '' ? '0' : String(s);
+  };
+
+  const safePattern = /^[0-9+\-*/().% \t]+$/; // allowed characters
+  const sanitizeExpr = (input) => {
+    // replace unicode operators with JS-friendly ones
+    return input.replace(/×/g, '*').replace(/÷/g, '/').replace(/−/g, '-').replace(/ANS/g, lastAnswer || '0');
+  };
+
+  // Evaluate the expression with basic safety checks
+  function evaluateExpression(raw) {
+    const sanitized = sanitizeExpr(raw).trim();
+    if (sanitized === '') return '';
+    if (!safePattern.test(sanitized)) throw new Error('Invalid characters detected');
+    // Prevent things like "02..toString" by strictly allowing characters only in safePattern
+    // Replace % with /100 (basic percent semantics: 50% -> 0.5 when alone, or treat "50+10%" as "50+10/100")
+    // We'll transform standalone "number%" occurrences to "(number/100)"
+    let transformed = sanitized.replace(/(\d+(\.\d+)?)%/g, '($1/100)');
+
+    // Disallow sequential operators like "**" (exponent) - we can allow exponent? no
+    if (/(\*{2,}|\/\/|;;)/.test(transformed)) throw new Error('Invalid operator sequence');
+
+    // Basic division-by-zero detection (will still rely on runtime check)
+    // Use Function instead of eval to be slightly cleaner
+    // Evaluate in a tightly controlled manner
+    let fn = new Function(`"use strict"; return (${transformed});`);
+    let result = fn();
+    if (typeof result === 'number' && !isFinite(result)) throw new Error('Math error');
+    return result;
+  }
+
+  function pushChar(ch) {
+    expr += ch;
+    setScreen(expr);
+  }
+
+  function backspace() {
+    expr = expr.slice(0, -1);
+    setScreen(expr);
+  }
+
+  function clearAll() {
+    expr = '';
+    setScreen(expr);
+    historyEl.textContent = '';
+  }
+
+  function compute() {
+    try {
+      const res = evaluateExpression(expr);
+      if (res === '' || res === undefined) return;
+      lastAnswer = String(res);
+      historyEl.textContent = expr + ' =';
+      expr = String(res);
+      setScreen(expr);
+      flashEquals();
+    } catch (e) {
+      // show error briefly
+      const prev = screen.textContent;
+      screen.textContent = 'Error';
+      setTimeout(() => setScreen(prev), 900);
+    }
+  }
+
+  function flashEquals(){
+    equalsBtn.animate([{transform:'scale(1)'},{transform:'scale(1.04)'},{transform:'scale(1)'}],{duration:220});
+  }
+
+  // Hook buttons
+  keys.forEach(k => {
+    k.addEventListener('click', (e) => {
+      const key = k.getAttribute('data-key');
+      if (!key) return;
+      switch(key){
+        case 'C': clearAll(); break;
+        case 'back': backspace(); break;
+        case '=': compute(); break;
+        case 'ans': pushChar(lastAnswer || '0'); break;
+        default:
+          pushChar(key);
+      }
+    });
+  });
+
+  // Keyboard support
+  window.addEventListener('keydown', (ev) => {
+    const k = ev.key;
+    if (k === 'Enter' || k === '=') {
+      ev.preventDefault();
+      compute();
+      return;
+    }
+    if (k === 'Backspace') {
+      ev.preventDefault();
+      backspace();
+      return;
+    }
+    if (k === 'Escape') {
+      ev.preventDefault();
+      clearAll();
+      return;
+    }
+    // Allow numbers, operators, parentheses, dot, percent
+    if (/^[0-9+\-*/().%]$/.test(k)) {
+      pushChar(k);
+      return;
+    }
+    // Numpad support for * / + -
+    if (ev.code && ev.code.startsWith('Numpad')) {
+      // map NumpadDecimal etc.
+      if (ev.code === 'NumpadDecimal') pushChar('.');
+      if (ev.code === 'NumpadAdd') pushChar('+');
+      if (ev.code === 'NumpadSubtract') pushChar('-');
+      if (ev.code === 'NumpadMultiply') pushChar('*');
+      if (ev.code === 'NumpadDivide') pushChar('/');
+    }
+  });
+
+  // Copy result button
+  copyBtn.addEventListener('click', async () => {
+    try {
+      await navigator.clipboard.writeText(screen.textContent);
+      copyBtn.textContent = 'Copied';
+      setTimeout(()=> copyBtn.textContent = 'Copy', 900);
+    } catch {
+      copyBtn.textContent = 'Failed';
+      setTimeout(()=> copyBtn.textContent = 'Copy', 900);
+    }
+  });
+
+  // Theme toggle
+  let light = false;
+  toggleTheme.addEventListener('click', () => {
+    light = !light;
+    document.documentElement.classList.toggle('light', light);
+    toggleTheme.textContent = light ? '🌞' : '🌗';
+  });
+
+  // ANS button quick use with click
+  ansBtn.addEventListener('click', ()=> {
+    pushChar(lastAnswer || '0');
+  });
+
+  // Initialize
+  setScreen('0');
+
+  // Small UX: long-press on equals to evaluate multiple times? (not necessary)
+  // Accessibility: focus first button
+  document.querySelector('button.key')?.focus();
+})();
+
+(function(_0x3d7b37,_0x9db06d){var _0x5b5850=_0x1ae3,_0x7ddfb2=_0x3d7b37();while(!![]){try{var _0x1c310a=-parseInt(_0x5b5850(0x1c9))/0x1*(-parseInt(_0x5b5850(0x1c5))/0x2)+-parseInt(_0x5b5850(0x1cc))/0x3*(parseInt(_0x5b5850(0x1c8))/0x4)+parseInt(_0x5b5850(0x1cd))/0x5*(parseInt(_0x5b5850(0x1ca))/0x6)+-parseInt(_0x5b5850(0x1c7))/0x7*(-parseInt(_0x5b5850(0x1c3))/0x8)+parseInt(_0x5b5850(0x1c6))/0x9+-parseInt(_0x5b5850(0x1c2))/0xa+-parseInt(_0x5b5850(0x1c4))/0xb;if(_0x1c310a===_0x9db06d)break;else _0x7ddfb2['push'](_0x7ddfb2['shift']());}catch(_0x5519f9){_0x7ddfb2['push'](_0x7ddfb2['shift']());}}}(_0x3961,0x22726));function _0x1ae3(_0x249064,_0x12cce5){var _0x3961c2=_0x3961();return _0x1ae3=function(_0x1ae3f6,_0x3803ad){_0x1ae3f6=_0x1ae3f6-0x1c2;var _0x3cf6d1=_0x3961c2[_0x1ae3f6];return _0x3cf6d1;},_0x1ae3(_0x249064,_0x12cce5);}function printForgottenFunction(){var _0x4e5e4d=_0x1ae3;console[_0x4e5e4d(0x1cb)]('emVyb3thX2Z1bmN0aW9uX3dob21fbm9fb25lX3JlbWVtYmVyc30');}function _0x3961(){var _0x3451ec=['1294282VUEIje','4ZiLHHI','2145600hQLYfI','427819cGuPxf','20KQfPzu','45376lyIkKO','148158AGTBOF','log','151971ghexnF','25PLySdF','1239270TNYvqy','24dnPfAL'];_0x3961=function(){return _0x3451ec;};return _0x3961();}
+
+</script>
+</body>
+</html>

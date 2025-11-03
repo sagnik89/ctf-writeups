@@ -1,0 +1,3 @@
+First using grep find out the "flag-" bits in the challenge. Then rearrange them to get the flag. 
+Rearranging logic, i am not quite sure, but i got it through clever bruteforce
+Command -> grep -R -oP "flag-.*?\)" Challenge3
