@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CTF Challenge - Slide 3</title>
+    <link rel="stylesheet" href="slide3.css">
+</head>
+<body>
+    <div class="container">
+        <div class="message-box">
+            <h2 class="problem-title">Math Problem</h2>
+            <p class="problem-text">Solve: x² - 20x + 91 = 0</p>
+            <p class="instruction-text">Find the roots of this equation</p>
+            
+            <div class="answer-section">
+                <label for="root1-input">Root 1:</label>
+                <input type="text" id="root1-input" class="answer-input" placeholder="Enter first root">
+                
+                <label for="root2-input">Root 2:</label>
+                <input type="text" id="root2-input" class="answer-input" placeholder="Enter second root">
+                
+                <button id="submit-btn" class="submit-button">Submit</button>
+            </div>
+
+            <div class="help-section">
+                <p class="help-text">Need help? Use this calculator:</p>
+                <a href="calculator.html" class="calculator-link" target="_blank">Open Calculator</a>
+            </div>
+
+            <div id="result-message" class="result-message"></div>
+        </div>
+    </div>
+    <script src="slide3.js"></script>
+</body>
+</html>

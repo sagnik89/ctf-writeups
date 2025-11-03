@@ -1,5 +1,9 @@
 # zerodayCTF25
 
+## This is the main writeup. To checkout the actual challenges and the files, you can look into this folder -> [folder](./Chalenges_zerodayCTF25/)
+
+
+
 ## Challenge: **Corrupted Courage**
 
 ### Description:
