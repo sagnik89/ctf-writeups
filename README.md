@@ -7,7 +7,7 @@ A collection of all my Capture The Flag (CTF) and security lab writeups in one p
 ## 📌 CTFs
 - [Hack With Jolu 25](./CTFs/Hack_With_Jolu_25/Hack_With_Jolu_25.md)
 - [BugCrowdCTF 25](./CTFs/BugCrowdCTF_25/BugCrowdCTF.md)
-- [zerodayCTF 25](./CTFs/zerodayCTF_25/zerodayCTF25.md)
+- [zerodayCTF 25](./CTFs/zerodayCTF_25/README.md)
 
 
 ## 🔐 PortSwigger Labs
