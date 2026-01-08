@@ -27,4 +27,3 @@ A collection of all my Capture The Flag (CTF) and security lab writeups in one p
 
 ---
 
-📂 Each writeup is organized in its respective folder for better navigation.  
