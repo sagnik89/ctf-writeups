@@ -34,9 +34,9 @@ dirb http://web.challenges.bhusa.bugcrowdctf.com:9110/api/v1/ /usr/share/wordlis
 
 This gives us the endpoint /api/v1/flag, which we can hit to find the flag.
 
-![chrome_X2DuFy7m6K.png](BugCrowdCTF%202483c5d54c76803b939fd50889299256/chrome_X2DuFy7m6K.png)
+![chrome_X2DuFy7m6K.png](BugCrowdCTF/chrome_X2DuFy7m6K.png)
 
-### Final Flag: `FLAG{h1dd3n_4p1_3ndp01nt_f0und`
+### Final Flag: `FLAG{h1dd3n_4p1_3ndp01nt_f0und}`
 
 ---
 
@@ -93,7 +93,7 @@ No tools.
 
 The website demands users to get a negative balance by depositing amount into the bank. At first i tried adding negative amount, but it had a filter for it, so It did not work. So, the only way a number can be negative after adding is when an overflow happens. If you have done DSA problems, you may have come across this. So, i just kept adding millions of dollars until it gave the flag.
 
-![chrome_haEl3qNvh6.png](BugCrowdCTF%202483c5d54c76803b939fd50889299256/chrome_haEl3qNvh6.png)
+![chrome_haEl3qNvh6.png](BugCrowdCTF/chrome_haEl3qNvh6.png)
 
 ### Final Flag: **FLAG{f1l1ng_c4b1n3t_0v3rfl0w_d3p0s1t_m4st3r}**
 
@@ -145,7 +145,7 @@ Cookie: AWSALB=XTa3dBYkL7zcvOxAmct3GGB8+JeUx4GYA3NBeRWvIlR3IMgSmSKTobMVzahGyBYgp
 Connection: keep-alive
 ```
 
-![VirtualBoxVM_UtPj6SocG5.png](BugCrowdCTF%202483c5d54c76803b939fd50889299256/VirtualBoxVM_UtPj6SocG5.png)
+![VirtualBoxVM_UtPj6SocG5.png](BugCrowdCTF/VirtualBoxVM_UtPj6SocG5.png)
 
 ### Final Flag: FLAG{insecur3_cookie_m4nipul4tion}
 
@@ -178,7 +178,7 @@ Disallow: /hidden_area_for_bots/
 
 hitting the /hidden_area_for_bots endpoint we get the flag
 
-![chrome_B4uYrTL4vZ.png](BugCrowdCTF%202483c5d54c76803b939fd50889299256/chrome_B4uYrTL4vZ.png)
+![chrome_B4uYrTL4vZ.png](BugCrowdCTF/chrome_B4uYrTL4vZ.png)
 
 ### Final Flag: FLAG{r0b0ts_kn0w_@ll_th3_s3cr3ts!}
 

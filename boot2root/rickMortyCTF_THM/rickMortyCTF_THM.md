@@ -5,7 +5,7 @@
 
 - An IP was given to us. When we visit “[http://10.201.15.**/](http://10.201.15.57/)”. [Change the IP according to what was given to you]. We land on a page.
 
-![image.png](rickMortyCTF_THM%202593c5d54c7680619bf4df15500d0d7f/image.png)
+![image.png](rickMortyCTF_THM/image.png)
 
 - Thoughts →
     - There is a single picture in the website which we can further analyze.
@@ -37,7 +37,7 @@
     
 - Checking the response
     
-    ![VirtualBoxVM_I80C7bvvMH.png](rickMortyCTF_THM%202593c5d54c7680619bf4df15500d0d7f/VirtualBoxVM_I80C7bvvMH.png)
+    ![VirtualBoxVM_I80C7bvvMH.png](rickMortyCTF_THM/VirtualBoxVM_I80C7bvvMH.png)
     
     - Found this in the response.
     - You could have also gotten this in simple inspection.
@@ -65,9 +65,9 @@
     gobuster dir -u http://10.201.15.57 -w /usr/share/wordlists/dirbuster/directory-list-2.3-medium.txt -x php,html,txt -t 30
     ```
     
-    ![VirtualBoxVM_3S0dAESWnK.png](rickMortyCTF_THM%202593c5d54c7680619bf4df15500d0d7f/VirtualBoxVM_3S0dAESWnK.png)
+    ![VirtualBoxVM_3S0dAESWnK.png](rickMortyCTF_THM/VirtualBoxVM_3S0dAESWnK.png)
     
-    ![VirtualBoxVM_zb0U5cdMUW.png](rickMortyCTF_THM%202593c5d54c7680619bf4df15500d0d7f/VirtualBoxVM_zb0U5cdMUW.png)
+    ![VirtualBoxVM_zb0U5cdMUW.png](rickMortyCTF_THM/VirtualBoxVM_zb0U5cdMUW.png)
     
 
 ## Exploiting

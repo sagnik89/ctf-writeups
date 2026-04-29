@@ -85,11 +85,11 @@
 - We got a  windows shell, Now we need to upgrade the shell in metasploit.
 - We can see the current sessions using the `sessions` command.
     
-    ![VirtualBoxVM_BCTEFGypFW.png](Blue_THM%202793c5d54c7680aaaf05e10dd2d373f0/VirtualBoxVM_BCTEFGypFW.png)
+    ![VirtualBoxVM_BCTEFGypFW.png](Blue_THM/VirtualBoxVM_BCTEFGypFW.png)
     
 - Upgrading the shell we see the meterpreter prompt
     
-    ![VirtualBoxVM_fspZXq3DAG.png](Blue_THM%202793c5d54c7680aaaf05e10dd2d373f0/VirtualBoxVM_fspZXq3DAG.png)
+    ![VirtualBoxVM_fspZXq3DAG.png](Blue_THM/VirtualBoxVM_fspZXq3DAG.png)
     
 - Now we get a fully functioning meterpreter shell
 - Now we migrate to a elevated process by using migrate to any process thats running as admin

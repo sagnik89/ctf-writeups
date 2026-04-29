@@ -199,7 +199,7 @@ We understood that its a straddling checkerboard cipher from the hint and also w
 
 ### Solution:
 
-![image.png](Hack_With_Jolu_25%2023e3c5d54c76801a9b28dc355e8e53ff/image.png)
+![image.png](Hack_With_Jolu_25/image.png)
 
 ### Final Flag: hwj{enchanted}
 
@@ -229,7 +229,7 @@ dcode.fr
 
 ### Solution:
 
-![msedge_JHGbf4Mige.png](Hack_With_Jolu_25%2023e3c5d54c76801a9b28dc355e8e53ff/msedge_JHGbf4Mige.png)
+![msedge_JHGbf4Mige.png](Hack_With_Jolu_25/msedge_JHGbf4Mige.png)
 
 ### Final Flag: hwj{shankar_cant_speak_properly}
 
@@ -289,7 +289,7 @@ dcode.cipher
 
 Cause we know 18 in decimal is 12 in hexadecimal
 
-![image.png](Hack_With_Jolu_25%2023e3c5d54c76801a9b28dc355e8e53ff/image%201.png)
+![image.png](Hack_With_Jolu_25/image%201.png)
 
 ### Final Flag: hwj{x0r_1s_w3ak}
 
@@ -796,7 +796,7 @@ The provided file was found blank but when you press ctrl A, you see the presenc
 
 ### Solution:
 
-![image.png](Hack_With_Jolu_25%2023e3c5d54c76801a9b28dc355e8e53ff/image%202.png)
+![image.png](Hack_With_Jolu_25/image%202.png)
 
 ### Final Flag: hwj{wh1t3sp4c3s_ar3_b4ck}
 
@@ -935,7 +935,7 @@ The provided file was a .wav file. After one hear, you can predict its morse cod
 
 ### Solution:
 
-![chrome_M97TE7C41s.png](Hack_With_Jolu_25%2023e3c5d54c76801a9b28dc355e8e53ff/chrome_M97TE7C41s.png)
+![chrome_M97TE7C41s.png](Hack_With_Jolu_25/chrome_M97TE7C41s.png)
 
 Text decoded →  **H W J M 0 R S 3 C 0 D 3 1 S F U N**
 
@@ -976,7 +976,7 @@ Then searching recursively through the text files….
 grep -ir "hwj{"
 ```
 
-![VirtualBoxVM_EexULRhdI0.png](Hack_With_Jolu_25%2023e3c5d54c76801a9b28dc355e8e53ff/VirtualBoxVM_EexULRhdI0.png)
+![VirtualBoxVM_EexULRhdI0.png](Hack_With_Jolu_25/VirtualBoxVM_EexULRhdI0.png)
 
 ### Final Flag: hwj{cha0tic_m3ss_N435GX}
 
@@ -1006,15 +1006,15 @@ google lens → For getting the text from the image
 
 ### Solution:
 
-![image.png](Hack_With_Jolu_25%2023e3c5d54c76801a9b28dc355e8e53ff/image%203.png)
+![image.png](Hack_With_Jolu_25/image%203.png)
 
-![image.png](Hack_With_Jolu_25%2023e3c5d54c76801a9b28dc355e8e53ff/image%204.png)
+![image.png](Hack_With_Jolu_25/image%204.png)
 
 Text recovered: **lan{v0xexm0r_mw_w0_jyr}**
 
 Decoding it in [dcode.fr](http://dcode.fr) → 
 
-![chrome_P8OYOSGpZO.png](Hack_With_Jolu_25%2023e3c5d54c76801a9b28dc355e8e53ff/chrome_P8OYOSGpZO.png)
+![chrome_P8OYOSGpZO.png](Hack_With_Jolu_25/chrome_P8OYOSGpZO.png)
 
 Hence revored flag → hwj{r0tati0n_is_s0_fun}
 

