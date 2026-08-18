@@ -2,8 +2,6 @@
 
 This is where I keep writeups from boxes I've rooted, CTFs I've played, and labs I've worked through — HackTheBox, TryHackMe, picoCTF, PortSwigger's Web Security Academy, and a handful of independent CTF events.
 
-Mostly notes to myself, cleaned up enough that someone else could follow along.
-
 ## Structure
 
 ```
@@ -60,20 +58,12 @@ Working through picoCTF's guided playlists, one category at a time.
 ### `portswigger-labs/`
 Lab solutions from the Web Security Academy, grouped by vulnerability class:
 
-- [API testing](portswigger-labs/api-testing-labs/README.md) — mass assignment, server-side parameter pollution, undocumented endpoints
+- [API testing](portswigger-labs/api-testing-labs/README.md)
 - [Authentication](portswigger-labs/auth-labs/README.md)
 - [Business logic vulnerabilities](portswigger-labs/business-logic-labs/README.md)
 - [OS command injection](portswigger-labs/os-command-injection-labs/README.md)
-- [SQL injection](portswigger-labs/sql-injection-labs/README.md) — 12 labs, including blind SQLi
+- [SQL injection](portswigger-labs/sql-injection-labs/README.md)
 
 ## Format
 
 Most writeups follow the same rough shape: recon, exploitation, post-exploitation, with commands and screenshots along the way and the flag at the end as proof it actually worked.
-
-## A note on scope
-
-Everything here is from platforms built for this kind of practice, or from public CTFs — nothing targets real systems without permission.
-
-## Questions
-
-If something's unclear or you spot a mistake in a writeup, open an issue.
