@@ -171,7 +171,6 @@ def mail_create():
 
 
 def extract_url_and_get(resp):
-    print("[*] Step 5: Extracting URL from response")
 
     url = resp.json().get("data").get("attachments")[0].get("url")  # if JSON response
 
