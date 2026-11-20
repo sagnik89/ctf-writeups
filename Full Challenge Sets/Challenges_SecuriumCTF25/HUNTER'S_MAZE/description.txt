@@ -1,0 +1,6 @@
+Name: HUNTER'S MAZE
+Value: 300
+Category: Cryptography
+Description: Description: This challenge contains a multi-layer obfuscated flag. The original plaintext has been transformed through successive steps including classical ciphers, encoding formats, and an obfuscated JavaScript file that relates to the final layer. Your goal is to reverse the operations and extract the flag in the 
+
+format INTERN{...}

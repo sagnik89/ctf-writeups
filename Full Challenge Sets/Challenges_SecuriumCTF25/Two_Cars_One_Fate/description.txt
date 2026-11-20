@@ -1,0 +1,6 @@
+Name: Two Cars One Fate
+Value: 300
+Category: OSINT
+Description: Some race weekends are remembered for triumph, others for what never reached the finish. During one particular session at a certain circuit, two drivers representing the same constructor saw their race end before the checkered flag. It wasn’t weather. It wasn’t reliability. It was a sudden moment, replayed across the world. The timing sheets will tell you when, and the reports will tell you how. But not everything important was said on track — sometimes the crowd leaves their mark below.
+
+Format INTERN{}

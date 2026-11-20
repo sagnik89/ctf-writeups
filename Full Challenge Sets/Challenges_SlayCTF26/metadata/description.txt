@@ -1,0 +1,4 @@
+Name: metadata
+Value: 60
+Category: Forensics
+Description: Just a normal picture. or is it?

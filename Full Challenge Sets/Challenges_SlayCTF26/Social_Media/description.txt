@@ -1,0 +1,4 @@
+Name: Social Media
+Value: 40
+Category: OSINT
+Description: Find the flag on our social handles

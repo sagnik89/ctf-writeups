@@ -1,0 +1,6 @@
+Name: Boom
+Value: 200
+Category: Reverse Engineering
+Description: Try to solve the Boom Sweeper and complete without hitting the mine to get the flag or you can use your Reverse Engineering skills to do.
+
+Format : Flag{}

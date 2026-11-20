@@ -1,0 +1,8 @@
+Name: QuantumCode
+Value: 300
+Category: Cryptography
+Description: As quantum computing advances, a team of researchers developed their own "Quantum-Proof Encryption" (QPE) to protect sensitive data. However, in their haste, they may have introduced a critical vulnerability - quantum_resistant_2024.
+
+We've intercepted a message encrypted with QPE that contains the location of a secret research facility. Our analysts have determined the encryption uses a custom algorithm based on modern ciphers, but with a non-standard implementation. We've obtained the encrypted message and know the flag format is HUNTER{...}, but we need your help to crack it.
+
+Can you analyze the implementation, find the flaw, and decrypt the message?

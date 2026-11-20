@@ -1,0 +1,16 @@
+Return-Path: <alex@example.org>
+Received: from mx.example.org (mx.example.org [203.0.113.5])
+        by mail.recipient.net with ESMTP id 4f7a1b2c
+        for <victim@recipient.net>; Tue, 03 Nov 2026 10:14:22 +0000
+Received: from [192.168.1.14] (unknown [8.8.8.8])
+        by mx.example.org with ESMTPSA id 9c3d2e1f
+        for <victim@recipient.net>; Tue, 03 Nov 2026 10:14:19 +0000
+From: Alex <alex@example.org>
+To: victim@recipient.net
+Subject: Urgent: account verification
+Date: Tue, 03 Nov 2026 15:44:10 +0530
+Message-ID: <20261103154410.1234@example.org>
+MIME-Version: 1.0
+Content-Type: text/plain; charset="UTF-8"
+
+Please verify your account immediately.

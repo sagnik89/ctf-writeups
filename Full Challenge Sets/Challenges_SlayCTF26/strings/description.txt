@@ -1,0 +1,4 @@
+Name: strings
+Value: 40
+Category: Forensics
+Description: This cat is hiding something. Find it.

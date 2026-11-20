@@ -1,0 +1,6 @@
+Name: Calculated Deception
+Value: 30
+Category: Web
+Description: What looks like an ordinary calculator might be hiding something extraordinary. Numbers, operations, and a little curiosity are all you need. Can you calculate your way to the hidden secret?
+
+url - https://emperor1947.github.io/slay-challenge-1/

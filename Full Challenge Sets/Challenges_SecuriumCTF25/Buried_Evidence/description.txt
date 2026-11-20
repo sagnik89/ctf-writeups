@@ -1,0 +1,8 @@
+Name: Buried Evidence
+Value: 300
+Category: Forensics
+Description: Some cases don't end. They just go silent. Private investigator Sarah Mitchell was known for taking the cases no one else would touch. She worked in the shadows, chasing leads that the police ignored, and digging up secrets that powerful people wanted buried. A month ago, she sent a single message to her contact: "I found it. The missing piece. If I don't come back, my laptop holds everything." She never returned. Her laptop was recovered from her apartment. The hard drive was partially wiped, but forensic analysts managed to salvage several files—a diary, browsing history, meeting notes, a personal photo, and fragments from the Recycle Bin. The police have hit a dead end. They need you to dig deeper. Uncover the hidden evidence. Recover the encrypted conversation.  Retrieve the final verdict. 
+
+ 
+
+ Flag Format: INTERN{...}

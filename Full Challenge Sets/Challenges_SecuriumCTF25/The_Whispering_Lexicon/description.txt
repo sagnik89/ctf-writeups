@@ -1,0 +1,4 @@
+Name: The Whispering Lexicon
+Value: 200
+Category: Cryptography
+Description: Deep within an ancient archive lies a parchment filled with strange, shifting words. Linguists failed to crack its secrets, but rumor has it that one who understands patterns and silence may uncover its hidden truth.

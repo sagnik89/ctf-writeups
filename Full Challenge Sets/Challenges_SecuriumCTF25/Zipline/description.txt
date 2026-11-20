@@ -1,0 +1,4 @@
+Name: Zipline
+Value: 100
+Category: Forensics
+Description: We caught someone downloading something interesting. Take a look at the packet capture and figure out what they retrieved.

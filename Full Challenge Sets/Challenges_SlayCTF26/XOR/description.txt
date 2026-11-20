@@ -1,0 +1,4 @@
+Name: XOR
+Value: 60
+Category: Crypto
+Description: Each byte of the flag was XORed with a single-byte key: `0x5A`. The ciphertext is hex-encoded.

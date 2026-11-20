@@ -1,0 +1,4 @@
+Name: Shifty
+Value: 40
+Category: Crypto
+Description: A Caesar shift, but not 13.

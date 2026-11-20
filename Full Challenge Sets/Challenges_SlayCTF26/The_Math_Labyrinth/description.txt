@@ -1,0 +1,8 @@
+Name: The Math Labyrinth
+Value: 150
+Category: Web
+Description: From simple calculations to complex mathematical puzzles, every problem takes you one step closer to the solution. Test your logical thinking, sharpen your mathematical skills, and prove that you can conquer the numbers. Are you ready to solve them all?
+
+flag format for this challenge - zeroday{.............}
+
+url - https://emperor1947.github.io/Challenge/

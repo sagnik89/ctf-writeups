@@ -1,0 +1,6 @@
+Name: Flag Hunter - Cropocalypse
+Value: 207
+Category: Forensics
+Description: A screenshot was taken… then hastily cropped to hide sensitive data. But traces still remain.. Can you recover the hidden part of the image and extract the flag?
+
+https://drive.google.com/file/d/19T010yFnSzynGBBkRrrCW8YfRDkyTlgK/view?usp=sharing

@@ -1,0 +1,4 @@
+Name: Bit Planes
+Value: 30
+Category: Forensics
+Description: Look into the image, there is someting written below the top layer.

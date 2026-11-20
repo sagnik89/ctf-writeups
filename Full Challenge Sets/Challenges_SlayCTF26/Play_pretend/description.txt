@@ -1,0 +1,4 @@
+Name: Play pretend
+Value: 80
+Category: Forensics
+Description: The file won't open. Find out what its hiding

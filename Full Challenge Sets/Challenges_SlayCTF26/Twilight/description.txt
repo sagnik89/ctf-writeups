@@ -1,0 +1,4 @@
+Name: Twilight
+Value: 50
+Category: Rev
+Description: You made fun of SLAY now it's REVenge time. SLAY will make fun of you

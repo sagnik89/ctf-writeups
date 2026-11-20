@@ -1,0 +1,7 @@
+Name: Picture Puzzle
+Value: 120
+Category: Web
+Description: Find the scattered hints across my portfolio and shuffle them for your flag.
+
+
+https://emperor1947.github.io/slay-challenge-4/index.html

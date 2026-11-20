@@ -1,0 +1,6 @@
+Name: Pirates
+Value: 300
+Category: Cryptography
+Description: You have only two files — a suspicious photo and a ZIP archive, both password protected.
+The image hides a clue in its metadata and something more inside.
+Find the hidden password, unlock the secret, and open the final ZIP to claim the flag.

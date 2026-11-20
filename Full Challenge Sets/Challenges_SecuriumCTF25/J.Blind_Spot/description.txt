@@ -1,0 +1,9 @@
+Name: J.Blind Spot
+Value: 300
+Category: Forensics
+Description: In a world flooded with noisy data and false trails, your sharpest weapon isn’t a tool — it’s perception.
+
+At first glance, everything appears clean. No secrets. No traces. Nothing obvious.
+But the deeper you look, the more unsettling the silence becomes.
+
+This challenge tests your ability to question the obvious, to search beyond the usual boundaries, and to find meaning where most would stop looking. Forget automation — this one demands focus, patience, and a keen eye.

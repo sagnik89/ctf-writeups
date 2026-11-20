@@ -1,0 +1,7 @@
+Name: Operation Nightowl
+Value: 100
+Category: OSINT
+Description: A digital forensics CTF challenge where participants investigate a cybercriminal’s digital footprint across multiple levels. The challenge tests skills in web reconnaissance, OSINT (Open Source Intelligence), and forensic analysis as players uncover hidden clues, analyze available evidence, and connect pieces of information to reveal the hidden flags. Success requires careful investigation, critical thinking, and attention to detail.
+
+Flag Format: INTERN{……}
+Connection Info: http://164.92.126.208:5006/

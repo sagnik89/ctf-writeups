@@ -1,0 +1,6 @@
+Name: Are you sane?
+Value: 10
+Category: Sanity
+Description: If you are, then you must see this: 
+
+`slay{t0t4lly_s4n3}`

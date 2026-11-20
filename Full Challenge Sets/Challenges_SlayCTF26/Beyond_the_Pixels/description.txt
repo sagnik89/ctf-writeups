@@ -1,0 +1,7 @@
+Name: Beyond the Pixels
+Value: 40
+Category: Crypto
+Description: 👪👣👘👰👲🐪👤🐧👡🐨👪👖🐫👩🐪👖👥🐧👫👖🐫👣👮🐫👰👪👖👮👟🐫👫👖👫👟🐪👰👖👪🐪🐪👤👴
+
+
+Every emoji has more to it than meets the eye. Dig into the underlying Unicode representation, identify the hidden pattern, and reconstruct the secret message.

@@ -1,0 +1,6 @@
+Name: The Lost Route
+Value: 80
+Category: Web
+Description: Every journey begins with a destination, but not every destination is easy to find. Explore the website, follow the clues, and uncover what lies hidden along the way. Can you find the secret destination?
+
+url -  https://emperor1947.github.io/slay-challenge3/

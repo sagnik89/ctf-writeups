@@ -1,0 +1,7 @@
+Name: Noise
+Value: 50
+Category: Forensics
+Description: Can you hear it?
+
+Format: "slay{flag}" 
+(All in lowercases, no spaces)

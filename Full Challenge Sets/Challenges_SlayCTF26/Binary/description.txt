@@ -1,0 +1,4 @@
+Name: Binary
+Value: 30
+Category: Crypto
+Description: Convert the binary to text

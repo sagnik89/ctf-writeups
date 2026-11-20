@@ -1,0 +1,4 @@
+Name: Broken
+Value: 80
+Category: Forensics
+Description: The document refuses to open. Can you fix it?

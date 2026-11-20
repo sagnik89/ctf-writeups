@@ -1,0 +1,7 @@
+Name: Digital Theft
+Value: 200
+Category: Forensics
+Description: A digital forensics CTF challenge where participants examine digital artifacts to uncover hidden information and piece together the final flag. Through careful analysis of files and embedded clues, players must identify relevant evidence, connect findings, and solve the investigation. The challenge emphasizes forensic analysis, attention to detail, and problem-solving skills.
+
+Flag Format: INTERN{……}
+Connection Info: http://164.92.126.208:5008

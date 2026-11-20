@@ -1,0 +1,5 @@
+Name: Origin
+Value: 40
+Category: OSINT
+Description: email.txt is the raw header of a suspicious email. Find the public IP the email originally came from, then find which organization owns that IP.
+Flag: `slay{organization_name}` in lowercase with underscores.

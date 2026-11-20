@@ -1,0 +1,4 @@
+Name: Browser
+Value: 40
+Category: Web
+Description: Do you know which language runs in the browser?

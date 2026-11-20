@@ -1,6 +1,6 @@
 # zerodayCTF25
 
-## This is the main writeup. To checkout the actual challenges and the files, you can look into this folder -> [folder](./Chalenges_zerodayCTF25/)
+## This is the main writeup. To checkout the actual challenges and the files, you can look into this folder -> [folder](../../Full%20Challenge%20Sets/Challenges_zerodayCTF25/)
 
 
 

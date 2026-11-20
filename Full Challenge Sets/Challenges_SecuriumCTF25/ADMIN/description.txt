@@ -1,0 +1,7 @@
+Name: ADMIN
+Value: 100
+Category: Web
+Description: login and get the flag.
+
+INTERN{}
+Connection Info: http://164.92.126.208:5003/

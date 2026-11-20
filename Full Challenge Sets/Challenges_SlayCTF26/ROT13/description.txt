@@ -1,0 +1,4 @@
+Name: ROT13
+Value: 30
+Category: Crypto
+Description: Decode the ciphertext in cipher.txt

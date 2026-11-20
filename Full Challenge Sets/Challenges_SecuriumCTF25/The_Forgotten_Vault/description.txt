@@ -1,0 +1,9 @@
+Name: The Forgotten Vault
+Value: 200
+Category: Cryptography
+Description: Long ago, a vault was sealed to protect a secret lost to time. Its creators left behind five locked doors, each hiding a fragment of the key needed to reach the core. The clues have faded, the records are incomplete, and the path is anything but straightforward. Solve each challenge, recover the fragments, and uncover what has been hidden for generations.
+
+Will you unlock the vault, or become another forgotten explorer?
+
+Format  INTERN{...}
+Connection Info: http://164.92.126.208:5004

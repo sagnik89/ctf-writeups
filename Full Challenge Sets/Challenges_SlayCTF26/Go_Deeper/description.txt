@@ -1,0 +1,4 @@
+Name: Go Deeper
+Value: 50
+Category: Forensics
+Description: Something seems ordinary about this image, but appearances can be deceiving.Sometimes, the real secrets aren't visible on the surface. You just need to look a little deeper.Can you uncover what's hidden and retrieve the flag?

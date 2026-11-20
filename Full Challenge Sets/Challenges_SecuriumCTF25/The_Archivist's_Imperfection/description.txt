@@ -1,0 +1,7 @@
+Name: The Archivist's Imperfection
+Value: 300
+Category: Web
+Description: Deep within the Omnivault, an ancient Archivist AI guards fragmented records. It allows read‑only access through a single parameter — page — but its judgement is flawed. Some say it honours case strictly, others whisper that its pattern‑matching is incomplete.
+
+Your goal: Retrieve the flag from the archive.
+Connection Info: http://164.92.126.208:5002/

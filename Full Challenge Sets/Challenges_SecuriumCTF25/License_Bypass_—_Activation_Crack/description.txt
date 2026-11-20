@@ -1,0 +1,17 @@
+Name: License Bypass — Activation Crack
+Value: 100
+Category: Reverse Engineering
+Description: A suspicious EXE claims to Activate a license key for premium features. But hidden deep inside its binary lies a secret flag that only a true reverser can reveal.
+Disassemble, debug, and patch your way through the license check — and find the hidden flag string embedded in the binary’s memory or output.
+
+Your goal:
+
+    Analyze the executable
+
+    Find the logic that checks for valid activation
+
+    Patch or bypass it to reveal the flag
+
+    Extract the hidden flag from memory, strings, or console output
+
+    Format       Flag{}

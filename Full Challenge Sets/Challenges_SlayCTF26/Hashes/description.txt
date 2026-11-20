@@ -1,0 +1,5 @@
+Name: Hashes
+Value: 40
+Category: General
+Description: Passwords are never stored in plaintext
+Flag format: `slay{xxx}`

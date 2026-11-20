@@ -1,0 +1,4 @@
+Name: Detective's Notes
+Value: 80
+Category: Forensics
+Description: You were given only this image. We trust your perception.

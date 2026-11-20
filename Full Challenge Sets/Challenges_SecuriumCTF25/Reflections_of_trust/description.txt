@@ -1,0 +1,8 @@
+Name: Reflections of trust
+Value: 200
+Category: Web
+Description: A startup company has launched a simple profile page where users can enter their name and see it displayed on the screen.
+The developers are confident that they have secured the application. They even added a custom filter to block dangerous keywords.
+However, security through obscurity is rarely enough.
+Your mission is to investigate the profile page, bypass the input filter, and recover the hidden flag before it disappears forever.
+Connection Info: http://164.92.126.208:5001/

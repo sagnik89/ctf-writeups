@@ -1,0 +1,8 @@
+Name: Sleeper Secret
+Value: 300
+Category: Reverse Engineering
+Description: Your SOC team intercepted an unusual binary running silently on a compromised server.
+At first glance, it does nothing except sit there, “sleeping” in the background — no network calls, no file writes, no suspicious logs.
+However, a whisper from an insider claims that a priceless piece of intel — the flag — is hidden deep in its memory, but only appears after the right password wakes it.
+
+Format : Flag{}

@@ -1,0 +1,7 @@
+Name: Black Raven Investigation
+Value: 200
+Category: OSINT
+Description: A web-based OSINT investigation CTF challenge where participants follow a digital trail to uncover information about a suspect. By analyzing available clues and piecing together evidence, players must build a profile of the suspect and reveal hidden flags. The challenge focuses on reconnaissance, investigation, and critical thinking skills in a realistic cyber investigation scenario.
+
+Format INTERN{}
+Connection Info: http://164.92.126.208:5005/

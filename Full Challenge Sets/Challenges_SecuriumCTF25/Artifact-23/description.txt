@@ -1,0 +1,31 @@
+Name: Artifact-23
+Value: 100
+Category: Cryptography
+Description: ====================================================
+SECURE BACKUP EXPORT
+====================================================
+
+Export Type      : Encrypted Archive
+Encryption Person  :Martin 
+Integrity Check  : FAILED
+Transmission     : DEGRADED
+
+Session-ID       : 23
+Version          : 5
+
+Client-Public    : 8
+Server-Public    : 19
+
+Notes:
+Packet corruption detected during transfer.
+Several bytes may have been affected by transmission artifacts.
+
+Payload:
+
+07754a617d75647348767c0a4676636b4a6b577b5b0444584578054353776a59756168717304
+
+====================================================
+END OF EXPORT
+====================================================
+
+Flag Format: INTERN{...}

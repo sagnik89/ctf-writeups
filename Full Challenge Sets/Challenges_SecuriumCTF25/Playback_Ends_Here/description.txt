@@ -1,0 +1,6 @@
+Name: Playback Ends Here
+Value: 200
+Category: OSINT
+Description: The stage was alive, the voice felt eternal—until the music stopped without warning. One final song. A silence that spoke louder than any applause. Days before, the legend reshared a female singer's melody—a link, a performance, quietly forgotten. In the comments beneath that tribute, a fan admired the seamless the song switched.
+
+But not all signals are melodies. Some are noise.
